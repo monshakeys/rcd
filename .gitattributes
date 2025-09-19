@@ -1,0 +1,63 @@
+# ╔═══════════╗
+# ╠  Default  ╣
+# ╚═══════════╝
+* text=auto eol=lf
+*.doc* linguist-vendored
+*.jpg linguist-vendored
+*.log linguist-vendored
+*.png linguist-vendored
+*.ppt* linguist-vendored
+*.sql linguist-vendored
+*.txt linguist-vendored
+*.webp linguist-vendored
+*.xls* linguist-vendored
+
+# ╔══════════╗
+# ╠  Python  ╣
+# ╚══════════╝
+**/templates/* linguist-vendored
+htmlcov/* linguist-generated
+media/* linguist-vendored
+static/* linguist-vendored
+
+# ╔══════╗
+# ╠  AI  ╣
+# ╚══════╝
+.claude/* linguist-vendored
+.kilocode/* linguist-vendored
+.serena/* linguist-vendored
+CLAUDE.local.md linguist-vendored
+
+# ╔════════╗
+# ╠  Node  ╣
+# ╚════════╝
+node_modules/* linguist-vendored
+
+# ╔════════╗
+# ╠  Rust  ╣
+# ╚════════╝
+# core settings
+[attr]rust text eol=lf whitespace=tab-in-indent,trailing-space,tabwidth=4
+*.rs rust diff=rust
+# generated files (exclude from diffs and stats)
+**/*.generated.rs linguist-generated=true
+**/*.rs.bk linguist-generated=true
+target/**/* linguist-generated=true -diff
+# keep Cargo.lock in statistics
+Cargo.lock linguist-generated=false
+
+# ╔═══════════╗
+# ╠  Develop  ╣
+# ╚═══════════╝
+.docker/* linguist-vendored
+.kube/* linguist-vendored
+build/* linguist-generated
+dist/* linguist-generated
+docs/* linguist-documentation
+logs/* linguist-generated
+out/* linguist-generated
+
+# ╔════════════╗
+# ╠  Personal  ╣
+# ╚════════════╝
+zen.*/* linguist-vendored
