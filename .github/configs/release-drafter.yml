@@ -1,0 +1,37 @@
+name-template: 'lscmd v$RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
+config-name: configs/release-drafter.yml
+
+categories:
+  - title: '## What''s New'
+    labels:
+      - '*'
+
+change-template: '- $TITLE'
+
+version-resolver:
+  major:
+    labels: ['breaking', 'major']
+  minor:
+    labels: ['feature', 'enhancement', 'minor', 'feat']
+  patch:
+    labels: ['bug', 'fix', 'patch', 'bugfix']
+  default: patch
+
+template: |
+  A brief summary of this release and its key purpose.
+  
+  $CHANGES
+  
+  ## Technical Details
+  - Built with Rust
+  - Tested on macOS
+  - Minimum supported Rust version: [version]
+  
+  ## 🍺 Installation
+  ```sh
+  brew install monshakeys/tap/lscmd
+  ```
+  
+  ## Breaking Changes
+  - [List any breaking changes, if applicable]
